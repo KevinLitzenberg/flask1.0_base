@@ -33,3 +33,9 @@ Successfully installed Flask-1.0.2 Jinja2-2.10 MarkupSafe-1.1.0 Werkzeug-0.14.1 
 --------Version 0.0.1--------
 
 *Base install from tutroial on flask.  Acts as a framework to build a customized flask1.0 application.  Uses SQLLite for user data.
+
+--------Version 0.0.2--------
+
+[TO DO] 
+* commit .gitignore ensure that ignored files are removed from commit.
+* Create smart nav.  Back button goes back one page rather then back to  index.html.  "Knows how to go back 1."

@@ -87,6 +87,35 @@ def update(id):
 
     return render_template('blog/update.html', post=post)
 
+@bp.route('/<int:id>/view', methods=('GET', 'POST'))
+@login_required
+def view(id):
+    post = get_post(id)
+
+    if request.method == 'POST':
+        title = request.form['title']
+        body = request.form['body']
+        error = None
+
+       # return redirect(url_for('blog.index'))
+
+    return render_template('blog/view.html', post=post)
+
+# development debug page. 
+@bp.route('/<int:id>/debug', methods=('GET', 'POST'))
+@login_required
+def debug(id):
+    post = get_post(id)
+
+    if request.method == 'POST':
+        title = request.form['title']
+        body = request.form['body']
+        error = None
+
+       # return redirect(url_for('blog.index'))
+
+    return render_template('blog/debug.html', post=post)
+
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
